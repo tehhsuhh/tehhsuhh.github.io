@@ -46,6 +46,9 @@ function cursor_dodger_missing_elementor_notice() {
 function cursor_dodger_register_widget( $widgets_manager ) {
 	require_once CURSOR_DODGER_PATH . 'widgets/class-dodger-widget.php';
 	$widgets_manager->register( new \CursorDodger\Dodger_Widget() );
+
+	require_once CURSOR_DODGER_PATH . 'widgets/class-orb-widget.php';
+	$widgets_manager->register( new \CursorDodger\Orb_Widget() );
 }
 
 function cursor_dodger_register_assets() {
@@ -61,6 +64,23 @@ function cursor_dodger_register_assets() {
 		wp_register_script(
 			'cursor-dodger-js',
 			CURSOR_DODGER_URL . 'assets/dodger.js',
+			array(),
+			CURSOR_DODGER_VERSION,
+			true
+		);
+	}
+	if ( ! wp_style_is( 'cursor-dodger-orb-css', 'registered' ) ) {
+		wp_register_style(
+			'cursor-dodger-orb-css',
+			CURSOR_DODGER_URL . 'assets/orb.css',
+			array(),
+			CURSOR_DODGER_VERSION
+		);
+	}
+	if ( ! wp_script_is( 'cursor-dodger-orb-js', 'registered' ) ) {
+		wp_register_script(
+			'cursor-dodger-orb-js',
+			CURSOR_DODGER_URL . 'assets/orb.js',
 			array(),
 			CURSOR_DODGER_VERSION,
 			true
