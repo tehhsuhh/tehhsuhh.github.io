@@ -1,0 +1,18 @@
+.cursor-dodger {
+	position: relative;
+	overflow: hidden;
+	touch-action: none;
+	cursor: crosshair;
+	border-radius: 8px;
+}
+
+.cursor-dodger__shape {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	border-radius: 50%;
+	pointer-events: none;
+	will-change: transform;
+	transform: translate3d(0, 0, 0);
+}
