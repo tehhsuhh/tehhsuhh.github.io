@@ -1,19 +1,22 @@
 <?php
 /**
  * Plugin Name:       Cursor Dodger
- * Description:       Elementor widget that fills a box with circles that run away from the cursor.
- * Version:           1.0.0
+ * Description:       Elementor widget that fills a box with circles that run away from the cursor, plus a WebGL Orb widget.
+ * Version:           1.1.0
  * Author:            tehhsuhh
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       cursor-dodger
+ * Requires at least: 5.9
+ * Tested up to:      6.7
+ * Requires PHP:      7.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CURSOR_DODGER_VERSION', '1.0.0' );
+define( 'CURSOR_DODGER_VERSION', '1.1.0' );
 define( 'CURSOR_DODGER_FILE', __FILE__ );
 define( 'CURSOR_DODGER_PATH', plugin_dir_path( __FILE__ ) );
 define( 'CURSOR_DODGER_URL', plugin_dir_url( __FILE__ ) );
